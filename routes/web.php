@@ -19,6 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/client', function(){
-    return view('client');
-})->middleware('auth');
+Route::get('/client', 'ClientController@index')->middleware('auth');
